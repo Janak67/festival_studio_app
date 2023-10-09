@@ -34,7 +34,7 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
             Container(
               margin: const EdgeInsets.all(10),
               height: MediaQuery.of(context).size.height * 0.3,
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15), color: Colors.black),
               child: Column(
