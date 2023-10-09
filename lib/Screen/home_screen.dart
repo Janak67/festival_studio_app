@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
 
-    Global.g1.festivalsList.map((e) {
+    Global.g1.imageList.map((e) {
       FestivalModel f1 = FestivalModel.fromMap(e);
 
       Global.g1.modelList.add(f1);

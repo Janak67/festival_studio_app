@@ -29,7 +29,6 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
               height: MediaQuery.of(context).size.height * 0.5,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15), color: Colors.grey),
-
             ),
             Container(
               margin: const EdgeInsets.all(10),

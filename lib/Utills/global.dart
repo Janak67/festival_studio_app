@@ -22,7 +22,7 @@ class Global {
     CategoryModel(name: "Diwali", image: "assets/img/diwali.png"),
   ];
 
-  List<Map>festivalsList=[
+  List<Map>imageList=[
     {"image":"assets/img/holi.png","name":"Holi"},
     {"image":"assets/img/ganesh.png","name":"Holi"}
   ];
