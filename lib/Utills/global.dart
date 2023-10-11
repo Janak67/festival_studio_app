@@ -34,11 +34,11 @@ class Global {
     {"image":"assets/img/bgimg/kite4.png","name":"Uttarayan"},
     {"image":"assets/img/bgimg/kite5.png","name":"Uttarayan"},
 
+    {"image":"assets/img/bgimg/republic4.png","name":"Republic Day"},
     {"image":"assets/img/bgimg/republic.png","name":"Republic Day"},
     {"image":"assets/img/bgimg/republic1.png","name":"Republic Day"},
     {"image":"assets/img/bgimg/republic2.png","name":"Republic Day"},
     {"image":"assets/img/bgimg/republic3.png","name":"Republic Day"},
-    {"image":"assets/img/bgimg/republic4.png","name":"Republic Day"},
 
     {"image":"assets/img/bgimg/shiv1.png","name":"Maha Shivratri"},
     {"image":"assets/img/bgimg/shiv2.png","name":"Maha Shivratri"},

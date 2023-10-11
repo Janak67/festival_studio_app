@@ -33,20 +33,29 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.grey),
+                      borderRadius: BorderRadius.circular(15)),
                 ),
-                Visibility(
-                  visible: isimageindex,
-                  child: InkWell(
-                    onTap: () {
-                      setState(() {
-                        isimageindex = false;
-                      });
-                    },
-                    child: Image.asset(
-                      "assets/img/bgimg/${l1[image]}",
-                      fit: BoxFit.cover,
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: MediaQuery.of(context).size.height * 0.5,
+                  width: MediaQuery.of(context).size.width,
+                  child: Visibility(
+                    visible: isimageindex,
+                    child: InkWell(
+                      onTap: () {
+                        setState(() {
+                          isimageindex = false;
+                        });
+                      },
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(alignment: Alignment.center,
+                          "${l1[image].image}",
+                          fit: BoxFit.cover,
+                          height: MediaQuery.of(context).size.height * 0.5,
+                          width: MediaQuery.of(context).size.width,
+                        ),
+                      ),
                     ),
                   ),
                 )
@@ -86,7 +95,6 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                           margin: const EdgeInsets.all(7),
                           height: 120,
                           width: 100,
-                          color: Colors.white,
                           child: InkWell(
                               onTap: () {
                                 setState(() {
@@ -95,7 +103,7 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                                 });
                               },
                               child: Image.asset(
-                                "${l1[index].img}",
+                                "${l1[index].image}",
                                 fit: BoxFit.cover,
                                 height: 120,
                                 width: 100,
