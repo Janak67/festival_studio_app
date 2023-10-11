@@ -1,11 +1,11 @@
 class FestivalModel {
-  String? image, name;
+  String? img, name;
 
-  FestivalModel({this.image, this.name});
+  FestivalModel({this.img, this.name});
 
   factory FestivalModel.fromMap(Map m1){
     FestivalModel f1 =FestivalModel(
-      image: m1['image'],
+      img: m1['img'],
       name: m1['name'],
     );
     return f1;

@@ -10,6 +10,8 @@ class FestivalEditScreen extends StatefulWidget {
 }
 
 class _FestivalEditScreenState extends State<FestivalEditScreen> {
+  int image = 0;
+  bool isimageindex = true;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +26,31 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
       body: Center(
         child: Column(
           children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              height: MediaQuery.of(context).size.height * 0.5,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15), color: Colors.grey),
+            Stack(
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: MediaQuery.of(context).size.height * 0.5,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.grey),
+                ),
+                Visibility(
+                  visible: isimageindex,
+                  child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        isimageindex = false;
+                      });
+                    },
+                    child: Image.asset(
+                      "assets/img/bgimg/${l1[image]}",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                )
+              ],
             ),
             Container(
               margin: const EdgeInsets.all(10),
@@ -37,10 +59,12 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15), color: Colors.black),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         IconButton(
                             onPressed: () {},
@@ -51,21 +75,35 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(width: MediaQuery.of(context).size.width*0.9,
-                  height: 100,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: l1.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.all(5),
-                        height: 100,
-                        width: 100,
-                        color: Colors.transparent,
-                        child: Image.asset("${l1[index].image}",fit: BoxFit.cover,),
-                      );
-                    },
-                  ),)
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: 100,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: l1.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.all(7),
+                          height: 120,
+                          width: 100,
+                          color: Colors.white,
+                          child: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  isimageindex = true;
+                                  image = index;
+                                });
+                              },
+                              child: Image.asset(
+                                "${l1[index].img}",
+                                fit: BoxFit.cover,
+                                height: 120,
+                                width: 100,
+                              )),
+                        );
+                      },
+                    ),
+                  )
                 ],
               ),
             )
