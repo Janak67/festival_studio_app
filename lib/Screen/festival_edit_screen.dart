@@ -27,10 +27,12 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
   bool isimageindex = true;
   double _value = 15;
   GlobalKey globalKey = GlobalKey();
-  TextAlign txtAlign = TextAlign.center;
+  Alignment txtAlign = Alignment.center;
 
   @override
   Widget build(BuildContext context) {
+   double h = MediaQuery.of(context).size.height*0.5;
+   double w = MediaQuery.of(context).size.width;
     List<FestivalModel> l1 =
         ModalRoute.of(context)!.settings.arguments as List<FestivalModel>;
     return SafeArea(
@@ -49,23 +51,13 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                   children: [
                     Container(
                       margin: const EdgeInsets.all(10),
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      width: MediaQuery.of(context).size.width,
+                      height: h, width: w,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),color: colorbg[colorbgindex]),
-                      child: Text(
-                        "${Global.g1.txtName.text}",
-                        textAlign: txtAlign,
-                        style:
-                        TextStyle(fontSize: _value, color: colorbg[fontcolor],fontWeight: bold? FontWeight.bold:FontWeight.normal,
-                        fontStyle: italic? FontStyle.italic:FontStyle.normal,fontFamily: fontList[fontStyle],
-                        ),
-                      ),
                     ),
                     Container(
                       margin: const EdgeInsets.all(10),
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      width: MediaQuery.of(context).size.width,
+                      height: h, width: w,
                       child: Visibility(
                         visible: isimageindex,
                         child: InkWell(
@@ -86,7 +78,17 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    Container(
+                      alignment: txtAlign,
+                      height: h, width: w,
+                      child: Text(
+                        "${Global.g1.txtName.text}",
+                        style:
+                        TextStyle(fontSize: _value, color: colorbg[fontcolor],fontWeight: bold? FontWeight.bold:FontWeight.normal,
+                          fontStyle: italic? FontStyle.italic:FontStyle.normal,fontFamily: fontList[fontStyle],),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -188,7 +190,7 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                           IconButton(
                               onPressed: () {
                                 setState(() {
-                                  txtAlign = TextAlign.left;
+                                  txtAlign = Alignment.centerLeft;
                                 });
                               },
                               icon: const Icon(
@@ -198,7 +200,7 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                           IconButton(
                               onPressed: () {
                                 setState(() {
-                                  txtAlign = TextAlign.center;
+                                  txtAlign = Alignment.center;
                                 });
                               },
                               icon: const Icon(
@@ -208,7 +210,7 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                           IconButton(
                               onPressed: () {
                                 setState(() {
-                                  txtAlign = TextAlign.right;
+                                  txtAlign = Alignment.centerRight;
                                 });
                               },
                               icon: const Icon(
@@ -228,12 +230,13 @@ class _FestivalEditScreenState extends State<FestivalEditScreen> {
                               onPressed: () {setState(() {
                                 image = 0;
                                 colorbgindex=0; fontcolor=2;
+                                fontStyle = 0;
                                 italic = false;
                                 bold = false;
                                 isimageindex = true;
                                 _value = 15;
                                 globalKey = GlobalKey();
-                                txtAlign = TextAlign.center;
+                                txtAlign = Alignment.center;
                               });},
                               icon: const Icon(
                                 Icons.lock_reset,
