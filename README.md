@@ -16,7 +16,7 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 <p>
   <img src = "https://github.com/Janak67/festival_studio_app/assets/141834407/969a69d9-e714-40c4-a10f-0f3bc5bc2f10" height="500" width="150>
-  <img src = "https://github.com/Janak67/festival_studio_app/assets/141834407/c43d3565-a9a4-4c04-9b51-bb30141a6ef5" height="500" width="150">
+  <img src = "https://github.com/Janak67/festival_studio_app/assets/141834407/0ba46086-b110-413a-b907-e02a131328fa" height="500" width="150">
   <img src = "https://github.com/Janak67/festival_studio_app/assets/141834407/d80fdc3e-1c6e-48a4-87f5-61239a060739" height="500" width="150">
   <img src = "https://github.com/Janak67/festival_studio_app/assets/141834407/ec9bdb08-b8ce-4a50-8dc9-732b2caa1152" height="500" width="150">
   <img src = "https://github.com/Janak67/festival_studio_app/assets/141834407/a78aaad6-a30d-4c67-a17d-680059807c89" height="500" width="150">
